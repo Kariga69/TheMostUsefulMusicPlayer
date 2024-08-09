@@ -30,3 +30,5 @@ class MusicPlayer:
 
     def is_song_paused(self):
         return pygame.mixer.music.get_busy()
+
+
