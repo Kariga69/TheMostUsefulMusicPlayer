@@ -2,12 +2,14 @@ import pygame
 from settings import *
 from player import MusicPlayer
 from frame import Frame
+import os
 
 
 # All the config is in settings.py file.
 
 class App:
     Songs = ['./music/example.mp3', './music/Electrified.mp3', './music/FTL.mp3']  # List of songs to play.
+    pygame.font.init()
     def __init__(self):
         self.screen = pygame.display.set_mode(RES)  # Define the screen and its resolution.
         pygame.display.set_caption(TITLE)  # Set the title of the window.
