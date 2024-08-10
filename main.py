@@ -7,8 +7,8 @@ import os
 
 # All the config is in settings.py file.
 
-class App:
-    Songs = ['./music/example.mp3', './music/Electrified.mp3', './music/FTL.mp3']  # List of songs to play.
+class App:  # List of songs to play.
+    Songs = ['./music/example.mp3', './music/Electrified.mp3', './music/FTL.mp3']
     pygame.font.init()
     def __init__(self):
         self.screen = pygame.display.set_mode(RES)  # Define the screen and its resolution.
@@ -33,6 +33,10 @@ class App:
             if event.type == pygame.QUIT:
                 pygame.quit()
                 quit()
+
+    def add_song(self, song):
+        self.Songs.append(song)
+        self.music_player.play_song(song)
 
     # Run this function to start of the program.
     def run(self):
